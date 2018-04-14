@@ -1,0 +1,9 @@
+addpath(genpath('./3D_reconstruction/'));
+addpath(genpath('./data/'));
+addpath(genpath('./exp/'))
+addpath(genpath('./external/'))
+addpath(genpath('./FFD/'))
+addpath(genpath('./graph_creation/'))
+addpath(genpath('./python/'))
+addpath(genpath('./show/'))
+addpath(genpath('./utils/'));
