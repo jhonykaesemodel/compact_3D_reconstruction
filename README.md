@@ -3,13 +3,13 @@
 # Compact Model Representation for 3D Reconstruction
 Here you'll find the codes for the paper **[Compact Model Representation for 3D Reconstruction](https://jhonykaesemodel.com/publication/3dv2017)** presented at 3DV 2017.
 
-# Datasets Used
+## Datasets Used
 In this work we used the **[ShapeNetCore.v1](https://www.shapenet.org/)** and **[PASCAL3D+\_release1.1](http://cvgl.stanford.edu/projects/pascal3d.html)** datasets.
 
-# Requirements
+## Requirements
 To create the embedding graphs you'll need the **[CVX](http://cvxr.com/cvx/)** library.
 
-# Getting Started
+## Getting Started with a Demo
 Running a demo for the aeroplane category:
 1. Clone the repo:
 ```
@@ -21,7 +21,7 @@ git clone https://github.com/jhonykaesemodel/compact_3D_reconstruction.git
 5. Unzip it and place the directories `ShapeNetAnchors`, `ShapeNetGraph` and `ShapeNetMat.v1` into the `compact_3d_reconstruction\data\` folder
 6. Run `get_started.m` and have fun :)
 
-# Free-Form Deformation (FFD) Demo
+## Free-Form Deformation (FFD) Demo
 To get some intuition about FFD, in the `FFD` directory you'll find `demo_FFD.m` and also a simple FFD UI tool where you can select a control point and play with cursors to deform a 3D mesh model.
 
 To run the FFD UI run `FFD.mat` and click `Init` to load the Standford bunny. Wait until the bunny and the FFD grid of control points are loaded before selecting the control points and playing with the cursors.
