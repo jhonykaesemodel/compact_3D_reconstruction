@@ -17,18 +17,25 @@ switch class_uid
 end
 
 if exist(graph_file, 'file')
+    fprintf('Loading graph. It may take a while... \n')
     fgraph = load(graph_file);
     fgraph = fgraph.obj;
 else
+    fprintf('Creating graph. Go sleep... \n')
     fgraph = fusionGraph(class_uid);
     fgraph.connect_nodes();
     
     % voxelize all models
-    cd ~/compact_3D_reconstruction/python/
+    current_dir = pwd;
+    cd(strcat(current_dir,'/python/'));
     commandStr = ['python vxl.py -c ', class_uid, ' -r 128'];
     fprintf('Voxelizing models... \n')
-    [status, commandOut] = unix(commandStr, '-echo');
-    cd ~/compact_3D_reconstruction/
+    if isunix
+        [status, commandOut] = unix(commandStr, '-echo');
+    else
+        [status, commandOut] = system(commandStr, '-echo');
+    end
+    cd(current_dir)
     
     % compute voxel IoU
     voxel_iou = compute_all_voxel_iou(fgraph);

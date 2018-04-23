@@ -23,10 +23,13 @@ def convert_voxel(fdir, name):
     if os.path.isfile(bvfile):
         os.system('rm -rf {}'.format(bvfile))
     objfile = os.path.join(fdir, name+'.obj')
-    cmd = './binvox -d {} -bb -0.5 -0.5 -0.5 0.5 0.5 0.5 -cb -e '.format(g)+\
+    if os.name == 'nt': # if Windows
+        cmd = 'binvox.exe -d {} -bb -0.5 -0.5 -0.5 0.5 0.5 0.5 -cb -e '.format(g) + \
+            '-t binvox -ri {}'.format(objfile) # windows
+    else:
+        cmd = './binvox -d {} -bb -0.5 -0.5 -0.5 0.5 0.5 0.5 -cb -e '.format(g)+\
             '-t binvox -ri {}'.format(objfile) # unix
-    #cmd = 'binvox.exe -d {} -bb -0.5 -0.5 -0.5 0.5 0.5 0.5 -cb -e '.format(g) + \
-    #      '-t binvox -ri {}'.format(objfile) # windows
+
     os.system(cmd)
 
     # generate matlab
@@ -36,7 +39,7 @@ def convert_voxel(fdir, name):
         sio.savemat(vmatfile, {'voxel':voxel})
 
 #filedir = os.path.join('C:/dataset/ShapeNetMat.v1/', clsuid) # windows
-filedir = os.path.join('/dataset/ShapeNetMat.v1/', clsuid)
+filedir = os.path.join('C:\\datasets\\ShapeNetMat.v1\\', clsuid)
 
 arange = np.arange(g)*2/g-1+1/g
 X, Y, Z = np.meshgrid(arange, arange, arange)

@@ -17,12 +17,12 @@ git clone https://github.com/jhonykaesemodel/compact_3D_reconstruction.git
 ```
 2. Download Pascal3D+ dataset
 3. Open `add_paths.m` and change the path `root` with the path of the directory you placed the datasets (*e.g.* `root = 'C:\datasets'`)
-4. Download the precomputed data (*i.e.* aeroplane embedding graph files) **[here](https://www.dropbox.com/s/f2895gpuclqvvpt/data_demo.zip?dl=0)**:
+4. Download the precomputed data (*i.e.* aeroplane embedding graph files, ShapeNetCore 3D model IDs for all 3D models used and its manually annotated 3D anchors) **[here](https://www.dropbox.com/s/f2895gpuclqvvpt/data_demo.zip?dl=0)**:
 5. Unzip it and place the directories `ShapeNetAnchors`, `ShapeNetGraph` and `ShapeNetMat.v1` into the `compact_3d_reconstruction\data\` folder
 6. Run `get_started.m` and have fun :)
 
 ## Free-Form Deformation (FFD) Demo
-To get some intuition about FFD, in the `FFD` directory you'll find `demo_FFD.m` and also a simple FFD UI tool where you can select a control point and play with cursors to deform a 3D mesh model.
+To get some intuition about FFD, in the `FFD` directory you'll find `demo_FFD.m`, a tutorial `FFD_tutorial.mlx`, and also a simple FFD UI tool where you can select a control point and play with cursors to deform a 3D mesh model.
 
 To run the FFD UI run `FFD.mat` and click `Init` to load the Standford bunny. Wait until the bunny and the FFD grid of control points are loaded before selecting the control points and playing with the cursors.
 

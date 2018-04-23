@@ -16,8 +16,8 @@ class_uid = class2uid(class);
 fgraph = create_graph(class_uid);
 
 %% show models
-showGraphModels(fgraph)
-% 
+showGraphModels(fgraph);
+
 %% plot the FFD-LDC graph
 figure, drawGraph(fgraph, 'FontSize', 20, ...
                            'MarkerSize', 10, ...
@@ -27,6 +27,6 @@ figure, drawGraph(fgraph, 'FontSize', 20, ...
                            'ScaleFactor', 0.93);
                        
 %% show deformations
-source = 3;
-target = 6;
-show_deformed_models(fgraph, source, target, true)
+source = 1;
+target = 4;
+show_deformed_models(fgraph, source, target, true);

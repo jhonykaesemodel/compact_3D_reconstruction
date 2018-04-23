@@ -282,10 +282,12 @@ classdef fusionGraph < handle
             colorGCA = [7 54 66]/255;
             colorModel = [38 139 210]/255;
             
-            figure
+            figure;
+            fprintf('Press any key to go over the selected 3D CAD models... \n')
+            fprintf('They are the nodes of the graph (~30 nodes)... \n')
             for i = 1:obj.num_nodes
                 show_model(obj.nodes{i}.FFD, 'FaceColor', colorModel, 'ColorGCA', colorGCA, ...
-                    'MarkerSize', 20, 'isAnchor', true, 'isLattice', true)
+                    'MarkerSize', 20, 'isAnchor', true, 'isLattice', true);
                 title(sprintf('Node %d', i));
                 hold off
                 pause
