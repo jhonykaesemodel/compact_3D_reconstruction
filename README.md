@@ -4,7 +4,7 @@
 Here you'll find the codes for the paper **[Compact Model Representation for 3D Reconstruction](https://jhonykaesemodel.com/publication/3dv2017)** presented at 3DV 2017.
 
 ## Datasets Used
-In this work we used the **[ShapeNetCore.v1](https://www.shapenet.org/)** and **[PASCAL3D+\_release1.1](http://cvgl.stanford.edu/projects/pascal3d.html)** datasets.
+In this work we used the **[ShapeNetCore.v1](https://www.shapenet.org/)** and **[PASCAL3D+\_release1.1](ftp://cs.stanford.edu/cs/cvgl/PASCAL3D+_release1.1.zip)** datasets.
 
 ## Requirements
 To create the embedding graphs you'll need the **[CVX](http://cvxr.com/cvx/)** library.
