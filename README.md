@@ -16,7 +16,8 @@ Running a demo for the aeroplane category:
 git clone https://github.com/jhonykaesemodel/compact_3D_reconstruction.git
 ```
 2. Download Pascal3D+ dataset
-3. Open `add_paths.m` and change the path `root` with the path of the directory you placed the datasets (*e.g.* `root = 'C:\datasets'`)
+3. Open `data_paths.m` and change the path `root` with the path of the directory you placed the datasets (*e.g.* `root = 'C:\datasets'`  
+(A path like `C:\datasets\PASCAL3D+_release1.1\Images` should now exist)
 4. Download the precomputed data (*i.e.* aeroplane embedding graph files, ShapeNetCore 3D model IDs for all 3D models used and its manually annotated 3D anchors) **[here](https://www.dropbox.com/s/f2895gpuclqvvpt/data_demo.zip?dl=0)**
 5. Unzip it and place the directories `ShapeNetAnchors`, `ShapeNetGraph` and `ShapeNetMat.v1` into the `root` directory (*e.g.* `root = 'C:\datasets'`)
 6. Run `get_started.m` and have fun :)
